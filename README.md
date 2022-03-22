@@ -5,7 +5,7 @@ First lines being added
 
 The colour themes that i will be using in my site are as followed below: 
 
-/* Color Theme Swatches in Hex */
+```/* Color Theme Swatches in Hex */
 .Cute-little-girl-baking.-1-hex { color: #BF7E8A; }
 .Cute-little-girl-baking.-2-hex { color: #86548C; }
 .Cute-little-girl-baking.-3-hex { color: #F29F05; }
@@ -24,4 +24,4 @@ The colour themes that i will be using in my site are as followed below:
 .Cute-little-girl-baking.-2-hsla { color: hsla(292, 25, 44, 1); }
 .Cute-little-girl-baking.-3-hsla { color: hsla(39, 96, 48, 1); }
 .Cute-little-girl-baking.-4-hsla { color: hsla(33, 51, 89, 1); }
-.Cute-little-girl-baking.-5-hsla { color: hsla(28, 33, 62, 1); }
+.Cute-little-girl-baking.-5-hsla { color: hsla(28, 33, 62, 1); }```
