@@ -120,3 +120,13 @@
   tr:nth-child(odd) {
     background-color: #f3eae1;
   }
+
+  .meal-heading{
+    text-align: center;
+    font-family: cursive;
+  }
+
+  hr.solid {
+    width:60%;
+    border-top: 2px solid #bbb;
+  }
