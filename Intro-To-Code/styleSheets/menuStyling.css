@@ -64,3 +64,8 @@
 #instructions > li {
     margin-top: 10px;
 }
+
+hr.menu-divider {
+    width:60%;
+    border-top: 2px solid goldenrod;
+  }
