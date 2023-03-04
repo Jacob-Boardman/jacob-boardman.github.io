@@ -2,6 +2,8 @@
 .node_modules
 /dist
 vue3-jacob-cookbook/.node_modules
+node/
+node_modules/
 
 # local env files
 .env.local
