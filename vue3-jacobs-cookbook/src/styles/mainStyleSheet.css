@@ -20,7 +20,7 @@
     margin-top: 20px;
     float: right;
   }
-  .header-image > img,
+
   .body-image > img {
     border-radius: 5px;
     border: rgb(56, 56, 56) 2px inset;
@@ -112,7 +112,7 @@
 
   .meal-heading{
     text-align: center;
-    font-family: cursive;
+    font-family: auto;
   }
 
   hr.solid {

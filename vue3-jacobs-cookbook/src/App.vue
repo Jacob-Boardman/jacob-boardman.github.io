@@ -1,9 +1,5 @@
 <template>
-  <HeaderBar></HeaderBar>
-  <div id="nav">
-    <router-link to="/">Home</router-link>
-    <router-link to="/contact-page">Contact Me</router-link>
-  </div>
+  <HeaderBar ></HeaderBar>
   <router-view/>
 </template>
 
@@ -12,7 +8,11 @@ import HeaderBar from './components/HeaderBar.vue'
 
 export default {
   name: 'App',
-  components: {HeaderBar}
+  components: {HeaderBar},
+  data() {
+    return{
+    }
+  }
 }
 </script>
 
