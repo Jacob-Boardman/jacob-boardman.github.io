@@ -1,3 +1,3 @@
 <template>
-    <h1>Dessert Page</h1>
+    <h1>Breakfast Page</h1>
 </template>

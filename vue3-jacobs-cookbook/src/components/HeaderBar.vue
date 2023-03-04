@@ -3,6 +3,7 @@
   <div class="navbar flex-container">
     <router-link class="navItem" to="/">About Me</router-link>
     <a class="navItem" href="breakfast.html">Breakfast</a>
+    <router-link class="navItem" to="/breakfast-page">Breakfast</router-link>
     <a class="navItem" href="lunch.html">Lunch</a>
     <a class="navItem" href="dinner.html">Dinner</a>
     <a class="navItem" href="afters.html">Afters/dessert</a>
