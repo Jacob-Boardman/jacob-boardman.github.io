@@ -1,7 +1,7 @@
 .DS_Store
 .node_modules
 /dist
-vue3-jacob-cookbook/node_modules
+vue3-jacob-cookbook/.node_modules
 
 # local env files
 .env.local
