@@ -1,15 +1,18 @@
 <template>
-  <HelloWorld msg="Jacob's Simple Cookbook"/>
+  <HeaderBar></HeaderBar>
+  <div id="nav">
+    <router-link to="/">Home</router-link>
+    <router-link to="/contact-page">Contact Me</router-link>
+  </div>
+  <router-view/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderBar from './components/HeaderBar.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {HeaderBar}
 }
 </script>
 

@@ -1,15 +1,4 @@
 <template>
-  <div class="header">
-        <h1>{{msg}}</h1>
-      </div>
-      <div class="navbar flex-container">
-        <a class="navItem" href="index.html">About Me</a>
-        <a class="navItem" href="breakfast.html">Breakfast</a>
-        <a class="navItem" href="lunch.html">Lunch</a>
-        <a class="navItem" href="dinner.html">Dinner</a>
-        <a class="navItem" href="afters.html">Afters/dessert</a>
-        <a class="navItem" href="contactMe.html">Contact Me</a>
-      </div>
     <div class="body">
       <div class="body-content">
         <h1>Hi my name is Jacob Boardman</h1>
