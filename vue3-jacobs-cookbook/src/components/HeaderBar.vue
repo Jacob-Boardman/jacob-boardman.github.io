@@ -8,9 +8,9 @@
   <div class="navbar flex-container">
     <router-link class="navItem" to="/">About Me</router-link>
     <router-link class="navItem" to="/breakfast-page">Breakfast</router-link>
-    <a class="navItem" href="lunch.html">Lunch</a>
-    <a class="navItem" href="dinner.html">Dinner</a>
-    <a class="navItem" href="afters.html">Afters/dessert</a>
+    <router-link class="navItem" to="/lunch-page">Lunch</router-link>
+    <router-link class="navItem" to="/dinner-page">Dinner</router-link>
+    <router-link class="navItem" to="/dessert-page">Desserts</router-link>
     <router-link class="navItem" to="/contact-page">Contact Me</router-link>
   </div>
 
@@ -23,7 +23,10 @@ export default {
       notBasePath: {
         '/': false,
         '/contact-page': true,
-        '/breakfast-page': true
+        '/breakfast-page': true,
+        '/lunch-page': true,
+        '/dinner-page': true,
+        '/dessert-page': true
       }
     }
   },

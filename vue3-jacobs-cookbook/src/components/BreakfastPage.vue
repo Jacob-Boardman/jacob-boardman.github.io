@@ -150,12 +150,13 @@
                             <li>Dig in and Enjoy!</li>
                         </ol>
                     </div>
-                    <div class="cookbook-menu-column-img">
+                    <!-- <div class="cookbook-menu-column-img">
                         <InstagramEmbed 
-                            url="'https://www.instagram.com/p/B_p0n_RFBaH/'" 
+                            :access-token="accessToken"
+                            :url="instagramUrl" 
                             :max-width=500
                         />
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -163,10 +164,16 @@
 </template>
 
 <script>
-import InstagramEmbed from 'vue-instagram-embed';
+// import InstagramEmbed from 'vue-instagram-embed';
 export default {
     components: {
-        InstagramEmbed
+        // InstagramEmbed
+    },
+    data() {
+        return {
+            accessToken: 'IGQVJYNDRCR1NSUGZAiU2QyN2xkSUZAfRVVYM1FmSDU2SkRfT0V4R3VCY3NIbmduSFBXSXdMcXdycXl2amNaeVZABNGhtanItYUNYNW9rZAkRWbnZAic2xKTWdaVHhMc293Smdjc3UwZAkxpSHNmM0s5SkR4OQZDZD',
+            instagramUrl: 'https://www.instagram.com/p/B_p0n_RFBaH/'
+        }
     }
 }
 </script>
