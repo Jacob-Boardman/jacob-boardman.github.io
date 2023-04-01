@@ -5,14 +5,6 @@
       <img src="../assets/ProfilePicture.jpeg" alt="Image of Jacob Boardman">
     </div>
   </v-header>
-  <div class="d-flex justify-center align-center mb-2 navbar">
-    <router-link class="navItem" to="/">About Me</router-link>
-    <router-link class="navItem" to="/breakfast-page">Breakfast</router-link>
-    <router-link class="navItem" to="/lunch-page">Lunch</router-link>
-    <router-link class="navItem" to="/dinner-page">Dinner</router-link>
-    <router-link class="navItem" to="/dessert-page">Desserts</router-link>
-    <router-link class="navItem" to="/contact-page">Contact Me</router-link>
-  </div>
 </template>
 
 <script>
@@ -34,6 +26,8 @@ export default {
 
 <style scoped>
 .header {
+  width: 100vw;
+  height: 100%;
   font-family: auto;
   font-style: italic;
   font-size: xx-large;
@@ -43,12 +37,16 @@ export default {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  height: 114px;
 }
 
 .header>h1 {
   font-family: auto;
   font-size: xxx-large;
+}
+
+.header-image {
+  align-self: center;
+  height: 100%;
 }
 
 .header-image>img {
@@ -57,34 +55,5 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 100px;
   height: 100px;
-}
-
-.navbar {
-  background: #995695a2;
-  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
-  border-top: rgb(247, 216, 40) 5px solid;
-}
-
-.navbar>.navItem {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  transition: 0.3s;
-  font-weight: bold;
-}
-
-.navItem:hover {
-  color: #000;
-  background: #F2E6D8
-}
-
-.navbar>.navItem>a {
-  color: #000;
-  text-decoration: none;
-}
-
-.navbar>.navItem>a:visited {
-  color: #000;
-  text-decoration: none;
 }
 </style>
