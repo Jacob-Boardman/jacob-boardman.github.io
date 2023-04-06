@@ -4,6 +4,7 @@
 vue3-jacob-cookbook/.node_modules
 node/
 node_modules/
+.history
 
 # local env files
 .env.local

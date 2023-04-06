@@ -1,12 +1,12 @@
 <template>
   <v-card>
     <v-app>
-      <v-navigation-drawer theme="dark" color="#c281bd" width="200">
-        <NavBar></NavBar>
-      </v-navigation-drawer>
       <v-app-bar height="110">
         <HeaderBar></HeaderBar>
       </v-app-bar>
+      <v-navigation-drawer theme="dark" color="#61477b">
+        <NavBar></NavBar>
+      </v-navigation-drawer>
       <v-main class="ml-4">
         <router-view />
       </v-main>
@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import HeaderBar from './components/HeaderBar.vue'
-import FooterBar from './components/FooterBar.vue'
+import HeaderBar from './components/HeaderBar.vue';
+import FooterBar from './components/FooterBar.vue';
 import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
   components: { HeaderBar, FooterBar, NavBar }
-}
+};
 </script>
 
 <style>
@@ -37,6 +37,11 @@ export default {
 }
 
 .v-navigation-drawer {
-  box-shadow: 6px 0px 10px -8px rgba(0, 0, 0, 0.75) !important
+  box-shadow: 6px 0px 10px -8px rgba(0, 0, 0, 0.75) !important;
+}
+
+.v-main {
+  background: #f2e6d8;
+  height: 100vh;
 }
 </style>

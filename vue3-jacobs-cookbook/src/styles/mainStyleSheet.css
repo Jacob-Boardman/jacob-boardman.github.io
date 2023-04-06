@@ -1,133 +1,139 @@
-  body {
-    background: #FAF9F6;
-  }
+body {
+  background: #f2e6d8;
+}
 
-  .body{
-    display: flex;
-  }
+.body {
+  display: flex;
+}
 
-  .body-content {
-    width: 100%;
-    margin-right: 8px;
-    margin-left: 20px;
-  }
+.body-content {
+  width: 100%;
+  margin-right: 8px;
+  margin-left: 20px;
+}
 
-  .body-image { 
-    margin-right: 30px;
-    margin-top: 20px;
-    float: right;
-  }
+.body-image {
+  margin-right: 30px;
+  margin-top: 20px;
+  float: right;
+}
 
-  .body-image > img {
-    border-radius: 5px;
-    border: rgb(56, 56, 56) 2px inset;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
+.body-image > img {
+  border-radius: 5px;
+  border: rgb(56, 56, 56) 2px inset;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-  .contact-form {
-    border-radius: 15px;
-    margin-top: 30px !important;
-    margin: auto;
-    left: 50%;
-    width: 60%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: rgb(255 249 230);
-    padding: 15px;
-  }
+.contact-form {
+  border-radius: 15px;
+  margin-top: 30px !important;
+  margin: auto;
+  left: 50%;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(255 249 230);
+  padding: 15px;
+}
 
-  
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
 
-  table {
-    border-collapse: collapse;
-    width: 80%;
-  }
+th,
+td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid rgb(56, 56, 56);
+}
 
-  th, td {
-    padding: 5px;
-    text-align: left;
-    border-bottom: 1px solid rgb(56, 56, 56);
-  }
+th {
+  color: white;
+  border-bottom: goldenrod 2px solid;
+  background-color: #995695a2;
+}
 
-  th {
-    color: white;
-    border-bottom: goldenrod 2px solid;
-    background-color: #995695a2;
-  }
+tr:nth-child(even) {
+  background-color: #f2e6d8;
+}
+tr:nth-child(odd) {
+  background-color: #f3eae1;
+}
 
-  tr:nth-child(even) {
-    background-color: #F2E6D8;
-  }
-  tr:nth-child(odd) {
-    background-color: #f3eae1;
-  }
+.meal-heading {
+  text-align: center;
+  font-family: auto;
+}
 
-  .meal-heading{
-    text-align: center;
-    font-family: auto;
-  }
+hr.solid {
+  width: 60%;
+  border-top: 2px solid #bbb;
+}
 
-  hr.solid {
-    width:60%;
-    border-top: 2px solid #bbb;
-  }
+.fa {
+  padding: 20px;
+  font-size: 30px !important;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
 
-  .fa {
-    padding: 20px;
-    font-size: 30px !important;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-  }
-  
-  .fa:hover {
-    opacity: 0.7;
-  }
+.fa:hover {
+  opacity: 0.7;
+}
 
-  .fa-instagram {
-    background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    color: white
-  }
+.fa-instagram {
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: white;
+}
 
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
 
-  .fa-linkedin {
-    background-color: rgb(1 119 181);
-    color: white;
-  }
-   
-  .socials {
-    display: flex;
-  }
+.fa-linkedin {
+  background-color: rgb(1 119 181);
+  color: white;
+}
 
-  .socials > p { 
-    margin-right: 16px;
-  }
+.socials {
+  display: flex;
+}
 
-  .socials > a { 
-    margin-right: 12px;
-  }
+.socials > p {
+  margin-right: 16px;
+}
 
-  #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 30px; /* Place the button at the bottom of the page */
-    right: 20px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #995695a2; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-  }
-  
-  #myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-  }
+.socials > a {
+  margin-right: 12px;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #995695a2; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
