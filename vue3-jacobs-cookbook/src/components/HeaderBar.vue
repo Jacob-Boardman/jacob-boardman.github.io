@@ -1,8 +1,8 @@
 <template>
   <v-header class="header">
-    <h1 style="-ms-flex-align: start;">Jacobs Simple Cookbook</h1>
+    <h1 style="-ms-flex-align: start">Jacobs Simple Cookbook</h1>
     <div v-if="notBasePath[$route.path]" class="header-image">
-      <img src="../assets/ProfilePicture.jpeg" alt="Image of Jacob Boardman">
+      <img src="../assets/ProfilePicture.jpeg" alt="Image of Jacob Boardman" />
     </div>
   </v-header>
 </template>
@@ -19,18 +19,17 @@ export default {
         '/dinner-page': true,
         '/dessert-page': true
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+
 .header {
   width: 100vw;
   height: 100%;
-  font-family: auto;
-  font-style: italic;
-  font-size: xx-large;
   padding: 10px;
   background: #e3bbf354;
   text-align: center;
@@ -39,8 +38,9 @@ export default {
   justify-content: space-between;
 }
 
-.header>h1 {
-  font-family: auto;
+.header > h1 {
+  margin-left: 30px;
+  font-family: 'Kite One', sans-serif;
   font-size: xxx-large;
 }
 
@@ -49,7 +49,7 @@ export default {
   height: 100%;
 }
 
-.header-image>img {
+.header-image > img {
   border-radius: 5px;
   border: rgb(56, 56, 56) 2px inset;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

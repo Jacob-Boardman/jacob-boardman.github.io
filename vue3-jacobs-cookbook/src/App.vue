@@ -4,7 +4,7 @@
       <v-app-bar height="110">
         <HeaderBar></HeaderBar>
       </v-app-bar>
-      <v-navigation-drawer theme="dark" color="#61477b">
+      <v-navigation-drawer theme="dark" color="#ffffff">
         <NavBar></NavBar>
       </v-navigation-drawer>
       <v-main class="ml-4">
@@ -41,7 +41,7 @@ export default {
 }
 
 .v-main {
-  background: #f2e6d8;
+  background: #ffffff;
   height: 100vh;
 }
 </style>

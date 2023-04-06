@@ -21,13 +21,13 @@ export default {
 .navbar {
   display: flex;
   flex-flow: column wrap;
-  background: #61477b;
+  background: #ffffff;
   align-items: flex-start;
   justify-content: flex-end;
 }
 
 .navbar > .navItem {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   text-align: center;
   padding: 10px;
@@ -36,24 +36,24 @@ export default {
   font-weight: bold;
   width: 80%;
   border-radius: 14px;
-  background: #61477b;
-  box-shadow: 7px 7px 7px #57406f, -7px -7px 7px #6b4e87;
+  background: #e3bbf354;
+  box-shadow: 7px 7px 7px #d9d9d9, -7px -7px 7px #ffffff;
 }
 
 .navItem:hover {
-  color: #000;
-  background: #f2e6d8;
+  color: #000000;
+  background: #e3bbf354;
   border-radius: 14px;
-  box-shadow: inset 7px 7px 7px #dacfc2, inset -7px -7px 7px #fffdee;
+  box-shadow: inset 7px 7px 7px #c19fcf54, inset -7px -7px 7px #ffd7ff54;
 }
 
 .navbar > .navItem > a {
-  color: #000;
+  color: #000000;
   text-decoration: none;
 }
 
 .navbar > .navItem > a:visited {
-  color: #000;
+  color: #000000;
   text-decoration: none;
 }
 </style>
