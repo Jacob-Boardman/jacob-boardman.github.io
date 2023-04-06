@@ -44,7 +44,5 @@ export default {
 
 .v-main {
   background: #e3bbf354;
-  height: 100vh;
-
 }
 </style>
