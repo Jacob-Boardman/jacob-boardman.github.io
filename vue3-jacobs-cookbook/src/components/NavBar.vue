@@ -26,14 +26,13 @@ export default {
   justify-content: flex-end;
 }
 
-.navbar > .navItem {
+.navbar>.navItem {
   color: #000000;
   text-decoration: none;
   text-align: center;
   padding: 10px;
   margin: 15px;
-  transition: 0.3s;
-  font-weight: bold;
+  transition: 0.5s;
   width: 80%;
   border-radius: 14px;
   background: #e3bbf354;
@@ -41,19 +40,27 @@ export default {
 }
 
 .navItem:hover {
+  transition: 0.5s;
   color: #000000;
   background: #e3bbf354;
   border-radius: 14px;
   box-shadow: inset 7px 7px 7px #c19fcf54, inset -7px -7px 7px #ffd7ff54;
 }
 
-.navbar > .navItem > a {
+.navbar>.navItem>a {
   color: #000000;
   text-decoration: none;
 }
 
-.navbar > .navItem > a:visited {
+.navbar>.navItem>a:visited {
   color: #000000;
   text-decoration: none;
+}
+
+.navbar>.router-link-active {
+  color: #000000;
+  background: #e3bbf354;
+  border-radius: 14px;
+  box-shadow: inset 7px 7px 7px #c19fcf54, inset -7px -7px 7px #ffd7ff54;
 }
 </style>

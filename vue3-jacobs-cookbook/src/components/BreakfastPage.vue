@@ -191,10 +191,5 @@ export default {
 }
 </script>
 
-<style scoped>@import "../styles/mainStyleSheet.css";
-
-.wrapper {
-    width: 100%;
-    min-height: 100vh;
-}</style>
+<style></style>
 

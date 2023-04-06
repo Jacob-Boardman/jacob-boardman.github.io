@@ -31,29 +31,30 @@ export default {
   width: 100vw;
   height: 100%;
   padding: 10px;
-  background: #e3bbf354;
+  background: #b4a7fdbd;
   text-align: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
-.header > h1 {
+.header>h1 {
   margin-left: 30px;
   font-family: 'Kite One', sans-serif;
   font-size: xxx-large;
 }
 
 .header-image {
-  align-self: center;
   height: 100%;
-}
-
-.header-image > img {
+  align-self: center;
+  justify-self: flex-end;
   border-radius: 5px;
   border: rgb(56, 56, 56) 2px inset;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 100px;
-  height: 100px;
+}
+
+.header-image>img {
+  height: 100%;
+  aspect-ratio: 1/1;
 }
 </style>

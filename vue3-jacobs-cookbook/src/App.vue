@@ -29,19 +29,22 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+
 #app {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Kite One', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
 
 .v-navigation-drawer {
-  box-shadow: 6px 0px 10px -8px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 6px 0px 10px -8px rgba(54, 31, 68, 0.75) !important;
 }
 
 .v-main {
-  background: #ffffff;
+  background: #e3bbf354;
   height: 100vh;
+
 }
 </style>
