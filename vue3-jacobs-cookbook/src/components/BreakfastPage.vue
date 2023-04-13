@@ -70,36 +70,40 @@
                 </tr>
               </table>
               <ol id="instructions">
-                <li>In a medium saucepan, bring 1 inch (2.5cm) of water to a gentle simmer over medium
-                  heat
-                  Place a heatproof bowl on top of the pot making sure the bowl does not touch the
-                  water.
+                <li>
+                  In a medium saucepan, bring 1 inch (2.5cm) of water to a
+                  gentle simmer over medium heat Place a heatproof bowl on top
+                  of the pot making sure the bowl does not touch the water.
                 </li>
-                <li>Crack the eggs into the bowl, along with 2 tablespoons (28g) butter. Cook,
-                  constantly
-                  whisking, for 8 to 10 minutes, or until the eggs are cooked and starting to finely
-                  curd
-                  and
-                  come together. Remove from the heat while still creamy and soft.</li>
-                <li>Whisk in the remaining 2 tablespoons (28g) butter, along with the crème fraîche,
-                  until
-                  melted and well distributed. Season to taste with salt and pepper. Fold in the
-                  chives.
+                <li>
+                  Crack the eggs into the bowl, along with 2 tablespoons (28g)
+                  butter. Cook, constantly whisking, for 8 to 10 minutes, or
+                  until the eggs are cooked and starting to finely curd and come
+                  together. Remove from the heat while still creamy and soft.
                 </li>
-                <li>Toast the buns in a pan with butter until golden brown on the cut sides. To assemble
-                  each
-                  sandwich, spread garlic mayo on the bottom buns. Then add 2 slices of bacon,
-                  followed by
-                  a
-                  generous mound of scrambled egg, and finally 2 slices of cheese. Torch or broil to
-                  melt
-                  the
-                  cheese. Top with your other half of the bun, and enjoy immediately.</li>
+                <li>
+                  Whisk in the remaining 2 tablespoons (28g) butter, along with
+                  the crème fraîche, until melted and well distributed. Season
+                  to taste with salt and pepper. Fold in the chives.
+                </li>
+                <li>
+                  Toast the buns in a pan with butter until golden brown on the
+                  cut sides. To assemble each sandwich, spread garlic mayo on
+                  the bottom buns. Then add 2 slices of bacon, followed by a
+                  generous mound of scrambled egg, and finally 2 slices of
+                  cheese. Torch or broil to melt the cheese. Top with your other
+                  half of the bun, and enjoy immediately.
+                </li>
               </ol>
             </div>
             <div class="cookbook-menu-column-img">
-              <img class="column-img" src="../assets/breakfast_sandwitch.jpg" alt="Image of breakfast sandwich"
-                height="400px" width="500px">
+              <img
+                class="column-img"
+                src="../assets/breakfast_sandwitch.jpg"
+                alt="Image of breakfast sandwich"
+                height="400px"
+                width="500px"
+              />
             </div>
           </div>
         </div>
@@ -146,31 +150,37 @@
                 </tr>
               </table>
               <ol id="instructions">
-                <li>Let's start off by preparing our food. First of cut you bagel in half length ways so
-                  that
-                  you have two circular halfs. Then slice the mushrooms roughly.</li>
-                <li>Next add some oil to a frying pan on and put on a medium heat.</li>
-                <li>Add your bacon to the pan and leave it alone to cook on the first side for about 8
-                  minuets,
-                  then flip them over and cook for the same time. After you have flipped
-                  the bacon add the mushrooms into the same pan and start frying them off.
+                <li>
+                  Let's start off by preparing our food. First of cut you bagel
+                  in half length ways so that you have two circular halfs. Then
+                  slice the mushrooms roughly.
                 </li>
-                <li>When you have about 3 minuets left for the bacon move them tothe side of the frying
-                  pan
-                  with
-                  your mushrooms. Next crack both eggs into the other side of the frying pan
-                  and let them start to cook. At this point you can now put your bagel halfs into the
-                  toaster.
+                <li>
+                  Next add some oil to a frying pan on and put on a medium heat.
                 </li>
-                <li>Watch you bacon mushrooms and eggs and turn off the heat when you are happy with how
-                  they
-                  are cooked.</li>
-                <li>Assembling is the easiest part. Take your toasted bagles halfs add themto your plate
-                  and
-                  apread butter (if prefered), at a little bit of suace and spread evenly.
-                  Take the bacon out first and add two pieces to each half. Lay your egg on top next.
-                  Then
-                  finish with your fried mushrooms.
+                <li>
+                  Add your bacon to the pan and leave it alone to cook on the
+                  first side for about 8 minuets, then flip them over and cook
+                  for the same time. After you have flipped the bacon add the
+                  mushrooms into the same pan and start frying them off.
+                </li>
+                <li>
+                  When you have about 3 minuets left for the bacon move them
+                  tothe side of the frying pan with your mushrooms. Next crack
+                  both eggs into the other side of the frying pan and let them
+                  start to cook. At this point you can now put your bagel halfs
+                  into the toaster.
+                </li>
+                <li>
+                  Watch you bacon mushrooms and eggs and turn off the heat when
+                  you are happy with how they are cooked.
+                </li>
+                <li>
+                  Assembling is the easiest part. Take your toasted bagles halfs
+                  add themto your plate and apread butter (if prefered), at a
+                  little bit of suace and spread evenly. Take the bacon out
+                  first and add two pieces to each half. Lay your egg on top
+                  next. Then finish with your fried mushrooms.
                 </li>
                 <li>Dig in and Enjoy!</li>
               </ol>
@@ -197,15 +207,13 @@ export default {
   },
   data() {
     return {
-      recipes: [
-        { name: "Breakfast Bagles" },
-        { name: "Breakfast Sandwich" }
-      ],
-      accessToken: 'IGQVJYNDRCR1NSUGZAiU2QyN2xkSUZAfRVVYM1FmSDU2SkRfT0V4R3VCY3NIbmduSFBXSXdMcXdycXl2amNaeVZABNGhtanItYUNYNW9rZAkRWbnZAic2xKTWdaVHhMc293Smdjc3UwZAkxpSHNmM0s5SkR4OQZDZD',
+      recipes: [{ name: 'Breakfast Bagles' }, { name: 'Breakfast Sandwich' }],
+      accessToken:
+        'IGQVJYNDRCR1NSUGZAiU2QyN2xkSUZAfRVVYM1FmSDU2SkRfT0V4R3VCY3NIbmduSFBXSXdMcXdycXl2amNaeVZABNGhtanItYUNYNW9rZAkRWbnZAic2xKTWdaVHhMc293Smdjc3UwZAkxpSHNmM0s5SkR4OQZDZD',
       instagramUrl: 'https://www.instagram.com/p/B_p0n_RFBaH/'
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
@@ -215,4 +223,3 @@ export default {
   margin-top: 0.5rem;
 }
 </style>
-
