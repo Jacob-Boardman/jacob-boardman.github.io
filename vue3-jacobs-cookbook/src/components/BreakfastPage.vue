@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="meal-heading">Breakfast</h2>
+    <h2 class="text-h2 text-center mt-4" style="font-family: 'Kite One', sans-serif !important;">Breakfast</h2>
     <v-divider thickness="3"></v-divider>
     <v-card v-for="recipe in recipes" :key="recipe.id" class="ma-3">
       <v-card-text class="ma-2 pb-2">
@@ -35,9 +35,7 @@
           <v-divider thickness="2"></v-divider>
         </v-list-item>
       </v-list>
-      <v-img :src="recipe.image" cover aspect-ratio="1" max-height="125" class="bg-grey-lighten-2"></v-img>
-      <img :src="recipe.image">
-      <img src="../assets/breakfast_sandwitch.jpg">
+      <v-img :src="recipe.image" cover aspect-ratio="1" max-height="500" class="bg-grey-lighten-2"></v-img>
     </v-card>
     <div class="cookbook-body">
       <div class="cookbook-menu">
@@ -246,15 +244,15 @@ export default {
         ],
         instructions: [
           {
-            name: 'Number 1',
+            name: 'Step 1',
             inst: 'In a medium saucepan, bring 1 inch (2.5cm) of water to a gentle simmer over medium heat Place a heatproof bowl on top of the pot making sure the bowl does not touch the water.'
           },
           {
-            name: 'Number 2',
+            name: 'Step 2',
             inst: 'Crack the eggs into the bowl, along with 2 tablespoons (28g) butter. Cook, constantly whisking, for 8 to 10 minutes, or until the eggs are cooked and starting to finely curd and come together. Remove from the heat while still creamy and soft.'
           }
         ],
-        image: '../assets/breakfast_sandwitch.jpg'
+        image: new URL('../assets/breakfast_sandwitch.jpg', import.meta.url).href
       }, {
         name: 'Breakfast Bagel',
         preptime: '3 minuets',
@@ -274,11 +272,11 @@ export default {
         ],
         instructions: [
           {
-            name: 'Number 1',
+            name: 'Step 1:',
             inst: 'Start off by preparing our food. First of cut you bagel in half length ways so that you have two circular halfs. Then slice the mushrooms roughly.'
           },
           {
-            name: 'Number 2',
+            name: 'Step 2:',
             inst: 'Next add some oil to a frying pan on and put on a medium heat.'
           }
         ],
@@ -288,14 +286,22 @@ export default {
         'IGQVJYNDRCR1NSUGZAiU2QyN2xkSUZAfRVVYM1FmSDU2SkRfT0V4R3VCY3NIbmduSFBXSXdMcXdycXl2amNaeVZABNGhtanItYUNYNW9rZAkRWbnZAic2xKTWdaVHhMc293Smdjc3UwZAkxpSHNmM0s5SkR4OQZDZD',
       instagramUrl: 'https://www.instagram.com/p/B_p0n_RFBaH/'
     };
+  },
+  methods: {
+    sendChildData() {
+      this.$emit('sendData', [{
+        route: '/breakfast-page',
+        names: this.recipes.map(recipe => { return recipe.name })
+      }]
+      );
+    }
+  },
+  mounted() {
+    this.sendChildData();
   }
 };
 </script>
 
 <style scoped>
-.meal-heading {
-  text-align: center;
-  font-size: xx-large;
-  margin-top: 0.5rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
 </style>

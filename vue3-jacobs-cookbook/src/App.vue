@@ -5,10 +5,10 @@
         <HeaderBar></HeaderBar>
       </v-app-bar>
       <v-navigation-drawer theme="dark" color="#ffffff">
-        <NavBar></NavBar>
+        <NavBar :recipes="recipes"></NavBar>
       </v-navigation-drawer>
       <v-main class="ml-4">
-        <router-view />
+        <router-view @sendData="getData" />
       </v-main>
       <v-footer>
         <FooterBar></FooterBar>
@@ -24,7 +24,19 @@ import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
-  components: { HeaderBar, FooterBar, NavBar }
+  components: { HeaderBar, FooterBar, NavBar },
+  data() {
+    return {
+      recipes: []
+    }
+  },
+  methods: {
+    getData(value) {
+      this.recipes = value;
+      console.log(value)
+      console.log(this.recipes)
+    }
+  }
 };
 </script>
 
