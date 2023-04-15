@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="meal-heading">Breakfast</h2>
-    <v-divider thickness="3" inset></v-divider>
+    <v-divider thickness="3"></v-divider>
     <v-card v-for="recipe in recipes" :key="recipe.id" class="ma-3">
       <v-card-text class="ma-2 pb-2">
         <h2>{{ recipe.name }}</h2>
@@ -11,7 +11,7 @@
         <h3>Cooktime: {{ recipe.cooktime }}</h3>
         <h3>Serves: {{ recipe.serving }}</h3>
       </v-card-text>
-      <v-divider thickness="3" inset></v-divider>
+      <v-divider thickness="2"></v-divider>
       <v-table class="ma-2" theme="light">
         <thead>
           <tr>
@@ -28,6 +28,13 @@
           </tr>
         </tbody>
       </v-table>
+      <v-divider thickness="2"></v-divider>
+      <v-list lines="none">
+        <v-list-item v-for="instruction in recipe.instructions" :key="instruction.name" :title="instruction.name">
+          {{ instruction.inst }}
+          <v-divider thickness="2"></v-divider>
+        </v-list-item>
+      </v-list>
     </v-card>
     <div class="cookbook-body">
       <div class="cookbook-menu">
@@ -244,8 +251,14 @@ export default {
           }
         ],
         instructions: [
-          'In a medium saucepan, bring 1 inch (2.5cm) of water to a gentle simmer over medium heat Place a heatproof bowl on top of the pot making sure the bowl does not touch the water.',
-          'Crack the eggs into the bowl, along with 2 tablespoons (28g) butter. Cook, constantly whisking, for 8 to 10 minutes, or until the eggs are cooked and starting to finely curd and come together. Remove from the heat while still creamy and soft.'
+          {
+            name: 'Number 1',
+            inst: 'In a medium saucepan, bring 1 inch (2.5cm) of water to a gentle simmer over medium heat Place a heatproof bowl on top of the pot making sure the bowl does not touch the water.'
+          },
+          {
+            name: 'Number 2',
+            inst: 'Crack the eggs into the bowl, along with 2 tablespoons (28g) butter. Cook, constantly whisking, for 8 to 10 minutes, or until the eggs are cooked and starting to finely curd and come together. Remove from the heat while still creamy and soft.'
+          }
         ]
       }, {
         name: 'Breakfast Bagel',
@@ -265,8 +278,14 @@ export default {
           }
         ],
         instructions: [
-          'Start off by preparing our food. First of cut you bagel in half length ways so that you have two circular halfs. Then slice the mushrooms roughly.',
-          'Next add some oil to a frying pan on and put on a medium heat.'
+          {
+            name: 'Number 1',
+            inst: 'Start off by preparing our food. First of cut you bagel in half length ways so that you have two circular halfs. Then slice the mushrooms roughly.'
+          },
+          {
+            name: 'Number 2',
+            inst: 'Next add some oil to a frying pan on and put on a medium heat.'
+          }
         ]
       }],
       accessToken:
