@@ -2,8 +2,32 @@
   <div>
     <h2 class="meal-heading">Breakfast</h2>
     <v-divider thickness="3" inset></v-divider>
-    <v-card v-for="recipe in recipes" :key="recipe.id">
-      {{ recipe.name }}
+    <v-card v-for="recipe in recipes" :key="recipe.id" class="ma-3">
+      <v-card-text class="ma-2 pb-2">
+        <h2>{{ recipe.name }}</h2>
+      </v-card-text>
+      <v-card-text class="ma-2 d-flex flex-row justify-space-evenly">
+        <h3>Preptime: {{ recipe.preptime }}</h3>
+        <h3>Cooktime: {{ recipe.cooktime }}</h3>
+        <h3>Serves: {{ recipe.serving }}</h3>
+      </v-card-text>
+      <v-divider thickness="3" inset></v-divider>
+      <v-table class="ma-2" theme="light">
+        <thead>
+          <tr>
+            <th class="text-center font-weight-bold">Ingredient</th>
+            <th class="text-center font-weight-bold">Quantity</th>
+            <th class="text-left font-weight-bold">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="ingredient in recipe.ingredients" :key="ingredient.name">
+            <td class="text-center">{{ ingredient.name }}</td>
+            <td class="text-center">{{ ingredient.quantity }}</td>
+            <td class="text-left">{{ ingredient.notes }}</td>
+          </tr>
+        </tbody>
+      </v-table>
     </v-card>
     <div class="cookbook-body">
       <div class="cookbook-menu">
@@ -97,13 +121,8 @@
               </ol>
             </div>
             <div class="cookbook-menu-column-img">
-              <img
-                class="column-img"
-                src="../assets/breakfast_sandwitch.jpg"
-                alt="Image of breakfast sandwich"
-                height="400px"
-                width="500px"
-              />
+              <img class="column-img" src="../assets/breakfast_sandwitch.jpg" alt="Image of breakfast sandwich"
+                height="400px" width="500px" />
             </div>
           </div>
         </div>
@@ -151,7 +170,7 @@
               </table>
               <ol id="instructions">
                 <li>
-                  Let's start off by preparing our food. First of cut you bagel
+                  Start off by preparing our food. First of cut you bagel
                   in half length ways so that you have two circular halfs. Then
                   slice the mushrooms roughly.
                 </li>
@@ -207,7 +226,49 @@ export default {
   },
   data() {
     return {
-      recipes: [{ name: 'Breakfast Bagles' }, { name: 'Breakfast Sandwich' }],
+      recipes: [{
+        name: 'Breakfast Sandwich',
+        preptime: '5 minuets',
+        cooktime: '15 minuets',
+        serving: 4,
+        ingredients: [
+          {
+            name: 'Egg',
+            quantity: '6 Large',
+            notes: ''
+          },
+          {
+            name: 'Butter',
+            quantity: '4 tsp',
+            notes: 'Preferably usalted, and a little extra for toasting'
+          }
+        ],
+        instructions: [
+          'In a medium saucepan, bring 1 inch (2.5cm) of water to a gentle simmer over medium heat Place a heatproof bowl on top of the pot making sure the bowl does not touch the water.',
+          'Crack the eggs into the bowl, along with 2 tablespoons (28g) butter. Cook, constantly whisking, for 8 to 10 minutes, or until the eggs are cooked and starting to finely curd and come together. Remove from the heat while still creamy and soft.'
+        ]
+      }, {
+        name: 'Breakfast Bagel',
+        preptime: '3 minuets',
+        cooktime: '10-15 minuets',
+        serving: 1,
+        ingredients: [
+          {
+            name: 'Bagels',
+            quantity: '1 standard',
+            notes: 'Can be your own choice of bagle'
+          },
+          {
+            name: 'Mushrooms',
+            quantity: '50g',
+            notes: ''
+          }
+        ],
+        instructions: [
+          'Start off by preparing our food. First of cut you bagel in half length ways so that you have two circular halfs. Then slice the mushrooms roughly.',
+          'Next add some oil to a frying pan on and put on a medium heat.'
+        ]
+      }],
       accessToken:
         'IGQVJYNDRCR1NSUGZAiU2QyN2xkSUZAfRVVYM1FmSDU2SkRfT0V4R3VCY3NIbmduSFBXSXdMcXdycXl2amNaeVZABNGhtanItYUNYNW9rZAkRWbnZAic2xKTWdaVHhMc293Smdjc3UwZAkxpSHNmM0s5SkR4OQZDZD',
       instagramUrl: 'https://www.instagram.com/p/B_p0n_RFBaH/'
