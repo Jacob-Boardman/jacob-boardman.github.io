@@ -35,6 +35,9 @@
           <v-divider thickness="2"></v-divider>
         </v-list-item>
       </v-list>
+      <v-img :src="recipe.image" cover aspect-ratio="1" max-height="125" class="bg-grey-lighten-2"></v-img>
+      <img :src="recipe.image">
+      <img src="../assets/breakfast_sandwitch.jpg">
     </v-card>
     <div class="cookbook-body">
       <div class="cookbook-menu">
@@ -211,13 +214,6 @@
                 <li>Dig in and Enjoy!</li>
               </ol>
             </div>
-            <!-- <div class="cookbook-menu-column-img">
-                        <InstagramEmbed 
-                            :access-token="accessToken"
-                            :url="instagramUrl" 
-                            :max-width=500
-                        />
-                    </div> -->
           </div>
         </div>
       </div>
@@ -226,10 +222,8 @@
 </template>
 
 <script>
-// import InstagramEmbed from 'vue-instagram-embed';
 export default {
   components: {
-    // InstagramEmbed
   },
   data() {
     return {
@@ -259,7 +253,8 @@ export default {
             name: 'Number 2',
             inst: 'Crack the eggs into the bowl, along with 2 tablespoons (28g) butter. Cook, constantly whisking, for 8 to 10 minutes, or until the eggs are cooked and starting to finely curd and come together. Remove from the heat while still creamy and soft.'
           }
-        ]
+        ],
+        image: '../assets/breakfast_sandwitch.jpg'
       }, {
         name: 'Breakfast Bagel',
         preptime: '3 minuets',
@@ -286,7 +281,8 @@ export default {
             name: 'Number 2',
             inst: 'Next add some oil to a frying pan on and put on a medium heat.'
           }
-        ]
+        ],
+        image: ''
       }],
       accessToken:
         'IGQVJYNDRCR1NSUGZAiU2QyN2xkSUZAfRVVYM1FmSDU2SkRfT0V4R3VCY3NIbmduSFBXSXdMcXdycXl2amNaeVZABNGhtanItYUNYNW9rZAkRWbnZAic2xKTWdaVHhMc293Smdjc3UwZAkxpSHNmM0s5SkR4OQZDZD',
