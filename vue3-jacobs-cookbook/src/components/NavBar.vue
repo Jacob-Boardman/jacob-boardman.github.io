@@ -4,8 +4,8 @@
       <router-link :to="link.route" class="navItem">
         {{ link.title }}
       </router-link>
-      <div v-show="recipeNames[0].route === link.route" class="subNavContainter">
-        <a v-for="name in recipeNames[0].names" :key="name" :href="'#' + name" class="subNavItem">
+      <div v-show="recipeNames[0]?.route === link.route" class="subNavContainter">
+        <a v-for="name in recipeNames[0]?.names" :key="name" :href="'#' + name" class="subNavItem">
           {{ name }}</a>
       </div>
     </div>
@@ -18,11 +18,6 @@
   </div>
 </template>
 <script>
-import { onMounted } from 'vue';
-onMounted(() => {
-  console.log('NavBar logs>>>>')
-  console.log(this.recipeNames);
-})
 export default {
   props: {
     recipes: {
@@ -49,6 +44,10 @@ export default {
       console.log({ route2 });
       console.log(route1 === route2);
     }
+  },
+  created() {
+    console.log('NavBar logs>>>>')
+    console.log(this.recipeNames);
   }
 };
 </script>

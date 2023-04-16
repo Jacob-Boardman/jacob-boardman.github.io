@@ -36,6 +36,9 @@ export default {
       console.log(value)
       console.log(this.recipes)
     }
+  },
+  beforeCreate() {
+    console.log(this.recipes)
   }
 };
 </script>

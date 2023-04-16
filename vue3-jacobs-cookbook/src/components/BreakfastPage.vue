@@ -1,3 +1,4 @@
+import { onMounted } from 'vue';
 <template>
   <div>
     <h2 class="text-h2 text-center mt-4" style="font-family: 'Kite One', sans-serif !important;">Breakfast</h2>
@@ -296,7 +297,7 @@ export default {
       );
     }
   },
-  mounted() {
+  created() {
     this.sendChildData();
   }
 };
