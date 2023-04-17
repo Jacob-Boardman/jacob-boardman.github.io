@@ -27,18 +27,21 @@ export default {
   components: { HeaderBar, FooterBar, NavBar },
   data() {
     return {
-      recipes: []
+      recipes: this.getData
+    }
+  },
+  computed: {
+    getData(value) {
+      console.log(value)
+      return value.recipes;
     }
   },
   methods: {
-    getData(value) {
-      this.recipes = value;
-      console.log(value)
-      console.log(this.recipes)
-    }
-  },
-  beforeCreate() {
-    console.log(this.recipes)
+    // getData(value) {
+    //   this.recipes = value;
+    //   console.log(value)
+    //   console.log(this.recipes)
+    // }
   }
 };
 </script>

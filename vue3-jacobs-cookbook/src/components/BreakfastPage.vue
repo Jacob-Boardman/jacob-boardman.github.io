@@ -290,15 +290,22 @@ export default {
   },
   methods: {
     sendChildData() {
-      this.$emit('sendData', [{
-        route: '/breakfast-page',
-        names: this.recipes.map(recipe => { return recipe.name })
-      }]
-      );
+
     }
   },
-  created() {
-    this.sendChildData();
+  beforeMount() {
+    this.$emit('sendData', [{
+      route: '/breakfast-page',
+      names: this.recipes.map(recipe => { return recipe.name })
+    }]
+    );
+  },
+  mounted() {
+    this.$emit('sendData', [{
+      route: '/breakfast-page',
+      names: this.recipes.map(recipe => { return recipe.name })
+    }]
+    );
   }
 };
 </script>
