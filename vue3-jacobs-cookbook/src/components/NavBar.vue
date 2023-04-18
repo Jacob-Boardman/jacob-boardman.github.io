@@ -4,8 +4,8 @@
       <router-link :to="link.route" class="navItem">
         {{ link.title }}
       </router-link>
-      <div v-show="recipeNames[0]?.route === link.route" class="subNavContainter">
-        <a v-for="name in recipeNames[0]?.names" :key="name" :href="'#' + name" class="subNavItem">
+      <div v-show="recipeNames.route === link.route" class="subNavContainter">
+        <a v-for="name in recipeNames.names" :key="name" :href="'#' + name" class="subNavItem">
           {{ name }}</a>
       </div>
     </div>
@@ -21,7 +21,7 @@
 export default {
   props: {
     recipes: {
-      type: Array,
+      type: Object,
       required: true
     }
   },
@@ -39,14 +39,11 @@ export default {
     };
   },
   methods: {
-    checkTrue(route1, route2) {
-      console.log({ route1 });
-      console.log({ route2 });
-      console.log(route1 === route2);
-    }
   },
-  created() {
-    console.log('NavBar logs>>>>')
+  mounted() {
+    console.log('NavBar logs>>>>');
+    console.log(this.recipeNames);
+    this.recipeNames = this.recipes;
     console.log(this.recipeNames);
   }
 };

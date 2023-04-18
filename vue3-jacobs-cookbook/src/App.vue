@@ -5,7 +5,7 @@
         <HeaderBar></HeaderBar>
       </v-app-bar>
       <v-navigation-drawer theme="dark" color="#ffffff">
-        <NavBar :recipes="recipes"></NavBar>
+        <NavBar :recipes="recipeNames"></NavBar>
       </v-navigation-drawer>
       <v-main class="ml-4">
         <router-view @sendData="getData" />
@@ -27,21 +27,21 @@ export default {
   components: { HeaderBar, FooterBar, NavBar },
   data() {
     return {
-      recipes: this.getData
-    }
-  },
-  computed: {
-    getData(value) {
-      console.log(value)
-      return value.recipes;
+      recipes: {}
     }
   },
   methods: {
-    // getData(value) {
-    //   this.recipes = value;
-    //   console.log(value)
-    //   console.log(this.recipes)
-    // }
+    getData(value) {
+      console.log('APP LOGS >>>>>>>')
+      this.recipes = value;
+      console.log(this.recipes);
+      this.recipeNames(value);
+    }
+  },
+  computed: {
+    recipeNames(value) {
+      return value
+    }
   }
 };
 </script>

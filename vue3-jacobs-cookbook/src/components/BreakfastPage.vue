@@ -1,4 +1,3 @@
-import { onMounted } from 'vue';
 <template>
   <div>
     <h2 class="text-h2 text-center mt-4" style="font-family: 'Kite One', sans-serif !important;">Breakfast</h2>
@@ -288,23 +287,12 @@ export default {
       instagramUrl: 'https://www.instagram.com/p/B_p0n_RFBaH/'
     };
   },
-  methods: {
-    sendChildData() {
-
+  methods: {},
+  created() {
+    this.$emit('sendData', {
+      route: '/breakfast-page',
+      names: this.recipes.map(recipe => { return recipe.name })
     }
-  },
-  beforeMount() {
-    this.$emit('sendData', [{
-      route: '/breakfast-page',
-      names: this.recipes.map(recipe => { return recipe.name })
-    }]
-    );
-  },
-  mounted() {
-    this.$emit('sendData', [{
-      route: '/breakfast-page',
-      names: this.recipes.map(recipe => { return recipe.name })
-    }]
     );
   }
 };
