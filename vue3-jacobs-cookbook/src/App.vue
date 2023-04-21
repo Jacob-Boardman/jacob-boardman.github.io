@@ -4,7 +4,7 @@
       <v-app-bar height="110">
         <HeaderBar></HeaderBar>
       </v-app-bar>
-      <v-navigation-drawer theme="dark" color="#ffffff">
+      <v-navigation-drawer theme="dark" color="#ffffff" width="250">
         <NavBar :recipes="recipes"></NavBar>
       </v-navigation-drawer>
       <v-main class="ml-4">

@@ -1,10 +1,10 @@
 <template>
-  <div class="d-flex flex-column flex-wrap justify-end align-start mb-2 navbar">
+  <div class="d-flex flex-column flex-wrap justify-end align-start navbar">
     <div v-for="link in links" :key="link.title" class="navItemContainer d-flex flex-column">
       <router-link :to="link.route" class="navItem">
         {{ link.title }}
       </router-link>
-      <div v-show="recipes.route === link.route" class="subNavContainter">
+      <div v-show="recipes.route === link.route" class="subNavContainter justify-end">
         <a v-for="name in recipes.names" :key="name" :href="'#' + name" class="subNavItem">
           {{ name }}</a>
       </div>
@@ -46,7 +46,8 @@ export default {
   color: #000000;
   text-decoration: none;
   text-align: center;
-  width: 80%;
+  width: 100%;
+  padding: 10px;
 }
 
 .navItemContainer>.navItem {
@@ -58,7 +59,6 @@ export default {
   text-decoration: none;
   text-align: center;
   padding: 10px;
-  margin: 15px;
   width: 100%;
 }
 
@@ -106,6 +106,14 @@ export default {
 }
 
 .navItemContainer>.router-link-active {
+  color: #000000;
+  background: #e3bbf354;
+  border-radius: 14px;
+  box-shadow: inset 7px 7px 7px #c19fcf54, inset -7px -7px 7px #ffd7ff54;
+}
+
+.subNavContainter>.subNavItem:active,
+.subNavContainter>.subNavItem:hover {
   color: #000000;
   background: #e3bbf354;
   border-radius: 14px;
