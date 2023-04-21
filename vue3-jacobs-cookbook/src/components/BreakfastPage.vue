@@ -4,7 +4,7 @@
     <v-divider thickness="3"></v-divider>
     <v-card v-for="recipe in recipes" :key="recipe.id" class="ma-3">
       <v-card-text class="ma-2 pb-2">
-        <h2 class="text-h4" style="font-family: 'Kite One', sans-serif !important;">{{ recipe.name }}</h2>
+        <h2 :id="recipe.name" class="text-h4" style="font-family: 'Kite One', sans-serif !important;">{{ recipe.name }}</h2>
       </v-card-text>
       <v-card-text class="ma-2 d-flex flex-row justify-space-evenly">
         <h3>Preptime: {{ recipe.preptime }}</h3>

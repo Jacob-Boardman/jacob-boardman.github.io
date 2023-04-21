@@ -9,12 +9,6 @@
           {{ name }}</a>
       </div>
     </div>
-    <!-- <router-link class="navItem" to="/">About Me</router-link>
-    <router-link class="navItem" to="/breakfast-page">Breakfast</router-link>
-    <router-link class="navItem" to="/lunch-page">Lunch</router-link>
-    <router-link class="navItem" to="/dinner-page">Dinner</router-link>
-    <router-link class="navItem" to="/dessert-page">Desserts</router-link>
-    <router-link class="navItem" to="/contact-page">Contact Me</router-link> -->
   </div>
 </template>
 <script>
