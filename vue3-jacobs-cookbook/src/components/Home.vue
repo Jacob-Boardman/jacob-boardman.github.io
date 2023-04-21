@@ -76,9 +76,13 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: 'AboutMe',
+  mounted() {
+    this.$emit('data', {
+      route: '/breakfast-page',
+      names: []
+    }
+    );
   }
 };
 </script>

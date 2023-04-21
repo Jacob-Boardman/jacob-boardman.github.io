@@ -4,8 +4,8 @@
       <router-link :to="link.route" class="navItem">
         {{ link.title }}
       </router-link>
-      <div v-show="recipeNames.route === link.route" class="subNavContainter">
-        <a v-for="name in recipeNames.names" :key="name" :href="'#' + name" class="subNavItem">
+      <div v-show="recipes.route === link.route" class="subNavContainter">
+        <a v-for="name in recipes.names" :key="name" :href="'#' + name" class="subNavItem">
           {{ name }}</a>
       </div>
     </div>
@@ -34,17 +34,12 @@ export default {
         { route: '/dinner-page', title: 'Dinner' },
         { route: '/dessert-page', title: 'Desserts' },
         { route: '/contact-page', title: 'Contact Me' }
-      ],
-      recipeNames: this.recipes
+      ]
     };
   },
   methods: {
   },
   mounted() {
-    console.log('NavBar logs>>>>');
-    console.log(this.recipeNames);
-    this.recipeNames = this.recipes;
-    console.log(this.recipeNames);
   }
 };
 </script>

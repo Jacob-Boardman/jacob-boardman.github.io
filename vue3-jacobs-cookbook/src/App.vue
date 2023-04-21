@@ -5,10 +5,10 @@
         <HeaderBar></HeaderBar>
       </v-app-bar>
       <v-navigation-drawer theme="dark" color="#ffffff">
-        <NavBar :recipes="recipeNames"></NavBar>
+        <NavBar :recipes="recipes"></NavBar>
       </v-navigation-drawer>
       <v-main class="ml-4">
-        <router-view @sendData="getData" />
+        <router-view @data="setData" />
       </v-main>
       <v-footer>
         <FooterBar></FooterBar>
@@ -31,16 +31,8 @@ export default {
     }
   },
   methods: {
-    getData(value) {
-      console.log('APP LOGS >>>>>>>')
-      this.recipes = value;
-      console.log(this.recipes);
-      this.recipeNames(value);
-    }
-  },
-  computed: {
-    recipeNames(value) {
-      return value
+    setData(data) {
+      this.recipes = data;
     }
   }
 };
