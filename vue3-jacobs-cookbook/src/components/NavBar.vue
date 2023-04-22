@@ -1,13 +1,28 @@
 <template>
   <div class="d-flex flex-column flex-wrap justify-end align-start navbar">
-    <div v-for="link in links" :key="link.title" class="navItemContainer d-flex flex-column">
+    <div
+      v-for="link in links"
+      :key="link.title"
+      class="navItemContainer d-flex flex-column"
+    >
       <router-link :to="link.route" class="navItem">
         {{ link.title }}
       </router-link>
-      <div v-show="recipes.route === link.route" class="subNavContainter justify-end">
-        <a v-for="name in recipes.names" :key="name" :href="'#' + name" class="subNavItem">
-          {{ name }}</a>
-      </div>
+      <v-expand-transition>
+        <div
+          v-if="recipes.route === link.route"
+          class="subNavContainter justify-end"
+        >
+          <a
+            v-for="name in recipes.names"
+            :key="name"
+            :href="'#' + name"
+            class="subNavItem"
+          >
+            {{ name }}</a
+          >
+        </div>
+      </v-expand-transition>
     </div>
   </div>
 </template>
@@ -16,25 +31,23 @@ export default {
   props: {
     recipes: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       links: [
-        { route: '/', title: 'About Me' },
-        { route: '/breakfast-page', title: 'Breakfast' },
-        { route: '/lunch-page', title: 'Lunch' },
-        { route: '/dinner-page', title: 'Dinner' },
-        { route: '/dessert-page', title: 'Desserts' },
-        { route: '/contact-page', title: 'Contact Me' }
-      ]
+        { route: "/", title: "About Me" },
+        { route: "/breakfast-page", title: "Breakfast" },
+        { route: "/lunch-page", title: "Lunch" },
+        { route: "/dinner-page", title: "Dinner" },
+        { route: "/dessert-page", title: "Desserts" },
+        { route: "/contact-page", title: "Contact Me" },
+      ],
     };
   },
-  methods: {
-  },
-  mounted() {
-  }
+  methods: {},
+  mounted() {},
 };
 </script>
 <style scoped>
@@ -50,7 +63,7 @@ export default {
   padding: 10px;
 }
 
-.navItemContainer>.navItem {
+.navItemContainer > .navItem {
   border-radius: 14px;
   background: #e3bbf354;
   box-shadow: 7px 7px 7px #d9d9d9, -7px -7px 7px #ffffff;
@@ -92,28 +105,28 @@ export default {
   text-align: center;
   padding: 8px;
   margin: 10px;
-  width: 80%
+  width: 80%;
 }
 
-.navItem>a {
+.navItem > a {
   color: #000000;
   text-decoration: none;
 }
 
-.navItem>a:visited {
+.navItem > a:visited {
   color: #000000;
   text-decoration: none;
 }
 
-.navItemContainer>.router-link-active {
+.navItemContainer > .router-link-active {
   color: #000000;
   background: #e3bbf354;
   border-radius: 14px;
   box-shadow: inset 7px 7px 7px #c19fcf54, inset -7px -7px 7px #ffd7ff54;
 }
 
-.subNavContainter>.subNavItem:active,
-.subNavContainter>.subNavItem:hover {
+.subNavContainter > .subNavItem:active,
+.subNavContainter > .subNavItem:hover {
   color: #000000;
   background: #e3bbf354;
   border-radius: 14px;
