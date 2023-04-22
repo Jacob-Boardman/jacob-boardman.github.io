@@ -69,21 +69,25 @@
       </p>
     </div>
     <div class="body-image">
-      <img src="../assets/ProfilePicture.jpeg" alt="Image of Jacob Boardman" height="200px" width="200px" />
+      <img
+        src="../assets/ProfilePicture.jpeg"
+        alt="Image of Jacob Boardman"
+        height="200px"
+        width="200px"
+      />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AboutMe',
+  name: "AboutMe",
   mounted() {
-    this.$emit('data', {
-      route: '/breakfast-page',
-      names: []
-    }
-    );
-  }
+    this.$emit("data", {
+      route: "/",
+      names: [],
+    });
+  },
 };
 </script>
 

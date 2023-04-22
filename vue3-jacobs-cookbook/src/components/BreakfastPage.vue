@@ -1,10 +1,21 @@
 <template>
   <div>
-    <h2 class="text-h2 text-center mt-4" style="font-family: 'Kite One', sans-serif !important;">Breakfast</h2>
+    <h2
+      class="text-h2 text-center mt-4"
+      style="font-family: 'Kite One', sans-serif !important"
+    >
+      Breakfast
+    </h2>
     <v-divider thickness="3"></v-divider>
     <v-card v-for="recipe in recipes" :key="recipe.id" class="ma-3">
       <v-card-text class="ma-2 pb-2">
-        <h2 :id="recipe.name" class="text-h4" style="font-family: 'Kite One', sans-serif !important;">{{ recipe.name }}</h2>
+        <h2
+          :id="recipe.name"
+          class="text-h4"
+          style="font-family: 'Kite One', sans-serif !important"
+        >
+          {{ recipe.name }}
+        </h2>
       </v-card-text>
       <v-card-text class="ma-2 d-flex flex-row justify-space-evenly">
         <h3>Preptime: {{ recipe.preptime }}</h3>
@@ -30,12 +41,22 @@
       </v-table>
       <v-divider thickness="2"></v-divider>
       <v-list lines="none">
-        <v-list-item v-for="instruction in recipe.instructions" :key="instruction.name" :title="instruction.name">
+        <v-list-item
+          v-for="instruction in recipe.instructions"
+          :key="instruction.name"
+          :title="instruction.name"
+        >
           {{ instruction.inst }}
           <v-divider thickness="2"></v-divider>
         </v-list-item>
       </v-list>
-      <v-img :src="recipe.image" cover aspect-ratio="1" max-height="500" class="bg-grey-lighten-2"></v-img>
+      <v-img
+        :src="recipe.image"
+        cover
+        aspect-ratio="1"
+        max-height="500"
+        class="bg-grey-lighten-2"
+      ></v-img>
     </v-card>
     <div class="cookbook-body">
       <div class="cookbook-menu">
@@ -129,8 +150,13 @@
               </ol>
             </div>
             <div class="cookbook-menu-column-img">
-              <img class="column-img" src="../assets/breakfast_sandwitch.jpg" alt="Image of breakfast sandwich"
-                height="400px" width="500px" />
+              <img
+                class="column-img"
+                src="../assets/breakfast_sandwitch.jpg"
+                alt="Image of breakfast sandwich"
+                height="400px"
+                width="500px"
+              />
             </div>
           </div>
         </div>
@@ -178,8 +204,8 @@
               </table>
               <ol id="instructions">
                 <li>
-                  Start off by preparing our food. First of cut you bagel
-                  in half length ways so that you have two circular halfs. Then
+                  Start off by preparing our food. First of cut you bagel in
+                  half length ways so that you have two circular halfs. Then
                   slice the mushrooms roughly.
                 </li>
                 <li>
@@ -221,83 +247,84 @@
 
 <script>
 export default {
-  components: {
-  },
   data() {
     return {
-      recipes: [{
-        name: 'Breakfast Sandwich',
-        preptime: '5 minuets',
-        cooktime: '15 minuets',
-        serving: 4,
-        ingredients: [
-          {
-            name: 'Egg',
-            quantity: '6 Large',
-            notes: ''
-          },
-          {
-            name: 'Butter',
-            quantity: '4 tsp',
-            notes: 'Preferably usalted, and a little extra for toasting'
-          }
-        ],
-        instructions: [
-          {
-            name: 'Step 1',
-            inst: 'In a medium saucepan, bring 1 inch (2.5cm) of water to a gentle simmer over medium heat Place a heatproof bowl on top of the pot making sure the bowl does not touch the water.'
-          },
-          {
-            name: 'Step 2',
-            inst: 'Crack the eggs into the bowl, along with 2 tablespoons (28g) butter. Cook, constantly whisking, for 8 to 10 minutes, or until the eggs are cooked and starting to finely curd and come together. Remove from the heat while still creamy and soft.'
-          }
-        ],
-        image: new URL('../assets/breakfast_sandwitch.jpg', import.meta.url).href
-      }, {
-        name: 'Breakfast Bagel',
-        preptime: '3 minuets',
-        cooktime: '10-15 minuets',
-        serving: 1,
-        ingredients: [
-          {
-            name: 'Bagels',
-            quantity: '1 standard',
-            notes: 'Can be your own choice of bagle'
-          },
-          {
-            name: 'Mushrooms',
-            quantity: '50g',
-            notes: ''
-          }
-        ],
-        instructions: [
-          {
-            name: 'Step 1:',
-            inst: 'Start off by preparing our food. First of cut you bagel in half length ways so that you have two circular halfs. Then slice the mushrooms roughly.'
-          },
-          {
-            name: 'Step 2:',
-            inst: 'Next add some oil to a frying pan on and put on a medium heat.'
-          }
-        ],
-        image: 'https://www.instagram.com/p/B_p0n_RFBaH/?utm_source=ig_web_copy_link'
-      }],
-      accessToken:
-        'IGQVJYNDRCR1NSUGZAiU2QyN2xkSUZAfRVVYM1FmSDU2SkRfT0V4R3VCY3NIbmduSFBXSXdMcXdycXl2amNaeVZABNGhtanItYUNYNW9rZAkRWbnZAic2xKTWdaVHhMc293Smdjc3UwZAkxpSHNmM0s5SkR4OQZDZD',
-      instagramUrl: 'https://www.instagram.com/p/B_p0n_RFBaH/'
+      recipes: [
+        {
+          name: "Breakfast Sandwich",
+          preptime: "5 minuets",
+          cooktime: "15 minuets",
+          serving: 4,
+          ingredients: [
+            {
+              name: "Egg",
+              quantity: "6 Large",
+              notes: "",
+            },
+            {
+              name: "Butter",
+              quantity: "4 tsp",
+              notes: "Preferably usalted, and a little extra for toasting",
+            },
+          ],
+          instructions: [
+            {
+              name: "Step 1",
+              inst: "In a medium saucepan, bring 1 inch (2.5cm) of water to a gentle simmer over medium heat Place a heatproof bowl on top of the pot making sure the bowl does not touch the water.",
+            },
+            {
+              name: "Step 2",
+              inst: "Crack the eggs into the bowl, along with 2 tablespoons (28g) butter. Cook, constantly whisking, for 8 to 10 minutes, or until the eggs are cooked and starting to finely curd and come together. Remove from the heat while still creamy and soft.",
+            },
+          ],
+          image: new URL("../assets/breakfast_sandwitch.jpg", import.meta.url)
+            .href,
+        },
+        {
+          name: "Breakfast Bagel",
+          preptime: "3 minuets",
+          cooktime: "10-15 minuets",
+          serving: 1,
+          ingredients: [
+            {
+              name: "Bagels",
+              quantity: "1 standard",
+              notes: "Can be your own choice of bagle",
+            },
+            {
+              name: "Mushrooms",
+              quantity: "50g",
+              notes: "",
+            },
+          ],
+          instructions: [
+            {
+              name: "Step 1:",
+              inst: "Start off by preparing our food. First of cut you bagel in half length ways so that you have two circular halfs. Then slice the mushrooms roughly.",
+            },
+            {
+              name: "Step 2:",
+              inst: "Next add some oil to a frying pan on and put on a medium heat.",
+            },
+          ],
+          image:
+            "https://www.instagram.com/p/B_p0n_RFBaH/?utm_source=ig_web_copy_link",
+        },
+      ],
     };
   },
   methods: {},
   mounted() {
-    this.$emit('data', {
-      route: '/breakfast-page',
-      names: this.recipes.map(recipe => { return recipe.name })
-    }
-    );
-  }
+    this.$emit("data", {
+      route: "/breakfast-page",
+      names: this.recipes.map((recipe) => {
+        return recipe.name;
+      }),
+    });
+  },
 };
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kite+One&display=swap");
 </style>
