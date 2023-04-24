@@ -5,7 +5,7 @@
       :key="link.title"
       class="navItemContainer d-flex flex-column"
     >
-      <router-link :to="link.route" class="navItem">
+      <router-link :to="link.route" class="navItem" @click="scrollToTop">
         {{ link.title }}
       </router-link>
       <v-expand-transition>
@@ -31,23 +31,30 @@ export default {
   props: {
     recipes: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
       links: [
-        { route: "/", title: "About Me" },
-        { route: "/breakfast-page", title: "Breakfast" },
-        { route: "/lunch-page", title: "Lunch" },
-        { route: "/dinner-page", title: "Dinner" },
-        { route: "/dessert-page", title: "Desserts" },
-        { route: "/contact-page", title: "Contact Me" },
-      ],
+        { route: '/', title: 'About Me' },
+        { route: '/breakfast-page', title: 'Breakfast' },
+        { route: '/lunch-page', title: 'Lunch' },
+        { route: '/dinner-page', title: 'Dinner' },
+        { route: '/dessert-page', title: 'Desserts' },
+        { route: '/contact-page', title: 'Contact Me' }
+      ]
     };
   },
-  methods: {},
-  mounted() {},
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  },
+  mounted() {}
 };
 </script>
 <style scoped>
@@ -64,7 +71,10 @@ export default {
 }
 
 .navItemContainer > .navItem {
-  border-radius: 14px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
   background: #e3bbf354;
   box-shadow: 7px 7px 7px #d9d9d9, -7px -7px 7px #ffffff;
   transition: 0.5s;
@@ -86,12 +96,11 @@ export default {
 .subNavContainter {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-content: end;
   color: #000000;
   text-decoration: none;
   text-align: center;
-  margin-left: auto;
+  margin-left: 30px;
 }
 
 .subNavItem {
@@ -105,7 +114,7 @@ export default {
   text-align: center;
   padding: 8px;
   margin: 10px;
-  width: 80%;
+  /* width: 80%; */
 }
 
 .navItem > a {
@@ -118,14 +127,19 @@ export default {
   text-decoration: none;
 }
 
-.navItemContainer > .router-link-active {
+.navItemContainer > .router-link-active,
+.subNavContainter > .subNavItem:active {
   color: #000000;
   background: #e3bbf354;
-  border-radius: 14px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 0px;
   box-shadow: inset 7px 7px 7px #c19fcf54, inset -7px -7px 7px #ffd7ff54;
+  width: 120%;
+  z-index: 10000;
 }
 
-.subNavContainter > .subNavItem:active,
 .subNavContainter > .subNavItem:hover {
   color: #000000;
   background: #e3bbf354;

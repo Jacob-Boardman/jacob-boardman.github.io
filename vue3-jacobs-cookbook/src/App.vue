@@ -4,7 +4,12 @@
       <v-app-bar height="110">
         <HeaderBar></HeaderBar>
       </v-app-bar>
-      <v-navigation-drawer theme="dark" color="#ffffff" width="250">
+      <v-navigation-drawer
+        theme="dark"
+        color="#ffffff"
+        width="250"
+        elevation="5"
+      >
         <NavBar :recipes="recipes"></NavBar>
       </v-navigation-drawer>
       <v-main class="ml-4">
@@ -28,7 +33,7 @@ export default {
   data() {
     return {
       recipes: {}
-    }
+    };
   },
   methods: {
     setData(data) {
@@ -48,11 +53,8 @@ export default {
   color: #2c3e50;
 }
 
-.v-navigation-drawer {
-  box-shadow: 6px 0px 10px -8px rgba(54, 31, 68, 0.75) !important;
-}
-
 .v-main {
   background: #e3bbf354;
+  min-height: 100%;
 }
 </style>
