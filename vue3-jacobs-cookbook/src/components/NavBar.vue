@@ -17,7 +17,9 @@
             v-for="name in recipes.names"
             :key="name"
             :href="'#' + name"
-            class="subNavItem"
+            :class="`subNavItem ${
+              this.$route.hash === '#' + name ? 'activeSubNav' : ''
+            }`"
           >
             {{ name }}</a
           >
@@ -31,30 +33,33 @@ export default {
   props: {
     recipes: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       links: [
-        { route: '/', title: 'About Me' },
-        { route: '/breakfast-page', title: 'Breakfast' },
-        { route: '/lunch-page', title: 'Lunch' },
-        { route: '/dinner-page', title: 'Dinner' },
-        { route: '/dessert-page', title: 'Desserts' },
-        { route: '/contact-page', title: 'Contact Me' }
-      ]
+        { route: "/", title: "About Me" },
+        { route: "/breakfast-page", title: "Breakfast" },
+        { route: "/lunch-page", title: "Lunch" },
+        { route: "/dinner-page", title: "Dinner" },
+        { route: "/dessert-page", title: "Desserts" },
+        { route: "/contact-page", title: "Contact Me" },
+      ],
     };
   },
   methods: {
     scrollToTop() {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
-    }
+    },
+    getActiveSubRoute() {
+      console.log(this.$route.hash);
+    },
   },
-  mounted() {}
+  mounted() {},
 };
 </script>
 <style scoped>
@@ -128,7 +133,7 @@ export default {
 }
 
 .navItemContainer > .router-link-active,
-.subNavContainter > .subNavItem:active {
+.activeSubNav {
   color: #000000;
   background: #e3bbf354;
   border-top-left-radius: 14px;
