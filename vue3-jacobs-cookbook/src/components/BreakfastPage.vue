@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2
-      class="text-h2 text-center mt-4"
+      class="text-h2 text-center mt-7"
       style="font-family: 'Kite One', sans-serif !important"
     >
       Breakfast
@@ -11,7 +11,7 @@
       <v-card-text class="ma-2 pb-2">
         <h2
           :id="recipe.name"
-          class="text-h4"
+          class="text-h4 recipeHeader"
           style="font-family: 'Kite One', sans-serif !important"
         >
           {{ recipe.name }}

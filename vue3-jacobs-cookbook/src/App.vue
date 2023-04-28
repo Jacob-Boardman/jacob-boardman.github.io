@@ -9,6 +9,7 @@
         color="#ffffff"
         width="250"
         elevation="5"
+        floating
       >
         <NavBar :recipes="recipes"></NavBar>
       </v-navigation-drawer>
@@ -23,31 +24,31 @@
 </template>
 
 <script>
-import HeaderBar from './components/HeaderBar.vue';
-import FooterBar from './components/FooterBar.vue';
-import NavBar from './components/NavBar.vue';
+import HeaderBar from "./components/HeaderBar.vue";
+import FooterBar from "./components/FooterBar.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: { HeaderBar, FooterBar, NavBar },
   data() {
     return {
-      recipes: {}
+      recipes: {},
     };
   },
   methods: {
     setData(data) {
       this.recipes = data;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kite+One&display=swap");
 
 #app {
-  font-family: 'Kite One', sans-serif;
+  font-family: "Kite One", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

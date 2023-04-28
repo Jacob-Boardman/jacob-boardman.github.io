@@ -20,6 +20,7 @@
             :class="`subNavItem ${
               this.$route.hash === '#' + name ? 'activeSubNav' : ''
             }`"
+            @click="scrollToElement(name)"
           >
             {{ name }}</a
           >
@@ -55,8 +56,12 @@ export default {
         behavior: "smooth",
       });
     },
-    getActiveSubRoute() {
-      console.log(this.$route.hash);
+    scrollToElement(name) {
+      const element = document.getElementById(name);
+      console.log(element.scrollTop - 110);
+      window.scrollTo({
+        top: element.scrollTop - 110,
+      });
     },
   },
   mounted() {},
