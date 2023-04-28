@@ -20,7 +20,7 @@
             :class="`subNavItem ${
               this.$route.hash === '#' + name ? 'activeSubNav' : ''
             }`"
-            @click="scrollToElement(name)"
+            :onclick="scrollToElement(name)"
           >
             {{ name }}</a
           >
@@ -61,6 +61,7 @@ export default {
       console.log(element.scrollTop - 110);
       window.scrollTo({
         top: element.scrollTop - 110,
+        behaviour: "smooth",
       });
     },
   },
