@@ -21,6 +21,7 @@
               this.$route.hash === '#' + name ? 'activeSubNav' : ''
             }`"
             :onclick="scrollToElement(name)"
+            @click="scrollToElement(name)"
           >
             {{ name }}</a
           >
