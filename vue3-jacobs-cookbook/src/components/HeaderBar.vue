@@ -6,7 +6,7 @@
       class="text-center align-self-center flex-grow-1"
       :class="notBasePath[$route.path] ? 'ml-7' : 'ml-n16'"
     >
-      Jacobs Simple Cookbook
+      The Mindless Cookbook
     </h1>
     <div v-if="notBasePath[$route.path]" class="header-image">
       <img src="../assets/ProfilePicture.jpeg" alt="Image of Jacob Boardman" />

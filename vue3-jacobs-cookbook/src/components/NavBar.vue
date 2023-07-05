@@ -70,10 +70,6 @@ export default {
 };
 </script>
 <style scoped>
-.navbar {
-  background: #ffffff;
-}
-
 .navItemContainer {
   color: #000000;
   text-decoration: none;
@@ -87,8 +83,8 @@ export default {
   border-top-right-radius: 14px;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
-  background: #e3bbf354;
-  box-shadow: 7px 7px 7px #d9d9d9, -7px -7px 7px #ffffff;
+  background: linear-gradient(145deg, #dcb6ec, #b999c7);
+  box-shadow: 7px 7px 0px #d9d9d9, -7px -7px 0px #ffffff;
   transition: 0.5s;
   color: #000000;
   text-decoration: none;
@@ -102,7 +98,7 @@ export default {
   color: #000000;
   background: #e3bbf354;
   border-radius: 14px;
-  box-shadow: inset 7px 7px 7px #c19fcf54, inset -7px -7px 7px #ffd7ff54;
+  box-shadow: inset 7px 7px 0px #c19fcf54, inset -7px -7px 0px #ffd7ff54;
 }
 
 .subNavContainter {
@@ -118,8 +114,8 @@ export default {
 .subNavItem {
   font-size: small;
   border-radius: 14px;
-  background: #e3bbf354;
-  box-shadow: 7px 7px 7px #d9d9d9, -7px -7px 7px #ffffff;
+  background: linear-gradient(145deg, #dcb6ec, #b999c7);
+  box-shadow: 7px 7px 0px #d9d9d9, -7px -7px 0px #ffffff;
   transition: 0.5s;
   color: #000000;
   text-decoration: none;
@@ -147,7 +143,7 @@ export default {
   border-top-right-radius: 0px;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 0px;
-  box-shadow: inset 7px 7px 7px #c19fcf54, inset -7px -7px 7px #ffd7ff54;
+  box-shadow: inset 7px 7px 0px #c19fcf54, inset -7px -7px 0px #ffd7ff54;
   width: 120%;
   z-index: 10000;
 }
@@ -156,6 +152,6 @@ export default {
   color: #000000;
   background: #e3bbf354;
   border-radius: 14px;
-  box-shadow: inset 7px 7px 7px #c19fcf54, inset -7px -7px 7px #ffd7ff54;
+  box-shadow: inset 7px 7px 0px #c19fcf54, inset -7px -7px 0px #ffd7ff54;
 }
 </style>

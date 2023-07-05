@@ -33,14 +33,14 @@ export default {
   components: { HeaderBar, FooterBar, NavBar },
   data() {
     return {
-      recipes: {},
+      recipes: {}
     };
   },
   methods: {
     setData(data) {
       this.recipes = data;
-    },
-  },
+    }
+  }
 };
 </script>
 
