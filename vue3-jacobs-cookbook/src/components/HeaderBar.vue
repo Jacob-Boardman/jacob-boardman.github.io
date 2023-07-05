@@ -1,10 +1,10 @@
 <template>
-  <v-header class="header">
+  <header class="header">
     <h1 style="-ms-flex-align: start">Jacobs Simple Cookbook</h1>
     <div v-if="notBasePath[$route.path]" class="header-image">
       <img src="../assets/ProfilePicture.jpeg" alt="Image of Jacob Boardman" />
     </div>
-  </v-header>
+  </header>
 </template>
 
 <script>
@@ -17,10 +17,10 @@ export default {
         "/breakfast-page": true,
         "/lunch-page": true,
         "/dinner-page": true,
-        "/dessert-page": true,
-      },
+        "/dessert-page": true
+      }
     };
-  },
+  }
 };
 </script>
 
