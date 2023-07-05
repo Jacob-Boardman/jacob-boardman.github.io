@@ -47,7 +47,6 @@ export default {
 .header > h1 {
   font-size: xxx-large;
   font-family: "Kite One", sans-serif !important;
-  /* notBasePath[$route.path] ? 'ml-8' : 'ml-n16' */
 }
 
 .header-image {
