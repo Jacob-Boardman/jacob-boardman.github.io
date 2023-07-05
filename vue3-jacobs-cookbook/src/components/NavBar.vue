@@ -35,8 +35,8 @@ export default {
   props: {
     recipes: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
@@ -46,15 +46,15 @@ export default {
         { route: "/lunch-page", title: "Lunch" },
         { route: "/dinner-page", title: "Dinner" },
         { route: "/dessert-page", title: "Desserts" },
-        { route: "/contact-page", title: "Contact Me" },
-      ],
+        { route: "/contact-page", title: "Contact Me" }
+      ]
     };
   },
   methods: {
     scrollToTop() {
       window.scrollTo({
         top: 0,
-        behavior: "smooth",
+        behavior: "smooth"
       });
     },
     scrollToElement(name) {
@@ -62,11 +62,11 @@ export default {
       console.log(element.scrollTop - 110);
       window.scrollTo({
         top: element.scrollTop - 110,
-        behaviour: "smooth",
+        behaviour: "smooth"
       });
-    },
+    }
   },
-  mounted() {},
+  mounted() {}
 };
 </script>
 <style scoped>

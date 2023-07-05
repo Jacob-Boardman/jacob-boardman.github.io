@@ -1,6 +1,13 @@
 <template>
-  <header class="header">
-    <h1 style="-ms-flex-align: start">Jacobs Simple Cookbook</h1>
+  <header
+    class="header d-flex flex-wrap flex-row justify-space-between align-center"
+  >
+    <h1
+      class="text-center align-self-center flex-grow-1"
+      :class="notBasePath[$route.path] ? 'ml-7' : 'ml-n16'"
+    >
+      Jacobs Simple Cookbook
+    </h1>
     <div v-if="notBasePath[$route.path]" class="header-image">
       <img src="../assets/ProfilePicture.jpeg" alt="Image of Jacob Boardman" />
     </div>
@@ -33,18 +40,14 @@ export default {
   padding: 10px;
   background: #b4a7fdbd;
   text-align: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  /* background-image: url("../assets/Your-Guide-to-Kitchen-Herbs-and-Spices-Cover.jpg");
-  background-position: bottom 100px;
-  background-size: 100%; */
+  background-image: url("../assets/cooking-banner-gbcadeaf94_1920.jpg");
+  background-size: cover;
 }
 
 .header > h1 {
-  margin-left: 30px;
-  font-family: "Kite One", sans-serif;
   font-size: xxx-large;
+  font-family: "Kite One", sans-serif !important;
+  /* notBasePath[$route.path] ? 'ml-8' : 'ml-n16' */
 }
 
 .header-image {
@@ -52,8 +55,9 @@ export default {
   align-self: center;
   justify-self: flex-end;
   border-radius: 5px;
-  border: rgb(56, 56, 56) 2px inset;
+  border: rgb(56, 56, 56) 3px inset;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 2px;
 }
 
 .header-image > img {
