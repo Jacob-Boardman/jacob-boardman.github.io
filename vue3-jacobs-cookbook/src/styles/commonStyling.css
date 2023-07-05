@@ -1,0 +1,14 @@
+tbody > tr:nth-of-type(even){
+    background-color: rgb(252, 240, 226);
+}
+thead {
+    background-color: bisque;
+} 
+
+thead > tr > th {
+    color: black !important
+}
+
+.v-list-item-title {
+    font-weight: 900 !important;
+}
