@@ -1,5 +1,6 @@
 <template>
-  <v-card>
+  <LoginView v-if="!loggedIn" />
+  <v-card v-if="loggedIn">
     <v-app>
       <v-app-bar height="110">
         <HeaderBar></HeaderBar>
@@ -27,13 +28,15 @@
 import HeaderBar from "./components/HeaderBar.vue";
 import FooterBar from "./components/FooterBar.vue";
 import NavBar from "./components/NavBar.vue";
+import LoginView from "./components/LoginView.vue";
 
 export default {
   name: "App",
-  components: { HeaderBar, FooterBar, NavBar },
+  components: { HeaderBar, FooterBar, NavBar, LoginView },
   data() {
     return {
-      recipes: {}
+      recipes: {},
+      loggedIn: true
     };
   },
   methods: {

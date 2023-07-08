@@ -8,6 +8,16 @@
     >
       The Mindless Cookbook
     </h1>
+    <div
+      class="usermenu mr-4 rounded-lg d-flex justify-center align-center flex-wrap justify-space-evenly"
+    >
+      <v-icon size="x-large" class="logout mx-1" :onClick="logout"
+        ><LogoutIcon
+      /></v-icon>
+      <v-icon size="x-large" class="addRecipe mx-1" :onClick="addRecipe"
+        ><PencilPlusIcon
+      /></v-icon>
+    </div>
     <div v-if="notBasePath[$route.path]" class="header-image">
       <img src="../assets/ProfilePicture.jpeg" alt="Image of Jacob Boardman" />
     </div>
@@ -15,7 +25,10 @@
 </template>
 
 <script>
+import { LogoutIcon, PencilPlusIcon } from "mdi-vue3";
 export default {
+  name: "HeaderBar",
+  components: { LogoutIcon, PencilPlusIcon },
   data() {
     return {
       notBasePath: {
@@ -27,6 +40,14 @@ export default {
         "/dessert-page": true
       }
     };
+  },
+  methods: {
+    logout() {
+      console.log("Logging out");
+    },
+    addRecipe() {
+      console.log("Adding recipe");
+    }
   }
 };
 </script>
@@ -62,5 +83,19 @@ export default {
 .header-image > img {
   height: 100%;
   aspect-ratio: 1/1;
+}
+
+.usermenu {
+  height: 50%;
+  background-color: #fdfce4;
+}
+
+.logout:hover {
+  color: #adadab;
+  size-adjust: 110%;
+}
+.addRecipe:hover {
+  color: #adadab;
+  size-adjust: 110%;
 }
 </style>
